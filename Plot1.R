@@ -2,8 +2,8 @@
 elData <- read.table("household_power_consumption.txt",sep = ";",header = T,na.strings = "?")
 
 # removing NA values
-good <- complete.cases(elecData)
-elDataGood <- electricData[good,]
+good <- complete.cases(elData)
+elDataGood <- elData[good,]
 
 # getting data on 1/2/2007 and 2/2/2007
 elDataFeb <- subset(elDataGood,Date==c("1/2/2007","2/2/2007"))
